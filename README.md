@@ -28,10 +28,10 @@ This is a web-based medical management system developed for ECE 9014 – Data Ma
 git clone https://github.com/yourusername/clinic_web.git
 cd clinic_web
 
-2.	Install dependencies
+2. Install dependencies
 pip install -r requirements.txt
 
-3.	Set up the database
+3. Set up the database
 
 	•	Create a MySQL database named clinic_db
 	•	Run your table creation script (or import provided schema)
@@ -45,10 +45,10 @@ db_config = {
     'database': 'clinic_db'
 }
 
-4.	Generate sample data
+4. Generate sample data
 python DataGen.py
 
-5.	Run the web app
+5. Run the web app
 python app.py
 Visit: http://localhost:5000
 
