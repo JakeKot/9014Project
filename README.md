@@ -1,7 +1,12 @@
-# 9014Project
-# Medical Management System (Flask + MySQL)
+当然可以！以下是你项目的完整 README.md 内容，专为你当前结构定制，包括文件改名为 DataGen.py，你可以一键复制整段粘贴到 GitHub 仓库中使用 ✅
 
-This is a web-based medical management system developed for ECE 9014 – Data Management and Applications. The system enables users to manage patients, doctors, appointments, medications, and queue information using a Python Flask frontend and a MySQL backend.
+⸻
+
+📄 README.md 内容（可直接复制）
+
+# Clinic Management System (Flask + MySQL)
+
+This is a web-based clinic management system developed for ECE 9014 – Data Management and Applications. The system enables users to manage patients, doctors, appointments, medications, and queue information using a Python Flask frontend and a MySQL backend.
 
 ## 💡 Features
 
@@ -22,16 +27,17 @@ This is a web-based medical management system developed for ECE 9014 – Data Ma
 
 ## 📦 Installation
 
-1. Clone the repository
+1. **Clone the repository**
 
 ```bash
 git clone https://github.com/yourusername/clinic_web.git
 cd clinic_web
 
-2. Install dependencies
+	2.	Install dependencies
+
 pip install -r requirements.txt
 
-3. Set up the database
+	3.	Set up the database
 
 	•	Create a MySQL database named clinic_db
 	•	Run your table creation script (or import provided schema)
@@ -45,14 +51,20 @@ db_config = {
     'database': 'clinic_db'
 }
 
-4. Generate sample data
+	4.	Generate sample data (optional)
+
 python DataGen.py
 
-5. Run the web app
+	5.	Run the web app
+
 python app.py
+
 Visit: http://localhost:5000
 
+⸻
+
 📁 Project Structure
+
 clinic_web/
 ├── app.py                # Main Flask app
 ├── config.py             # MySQL connection config
@@ -68,3 +80,22 @@ clinic_web/
 │   ├── queue.html
 │   ├── add_queue.html
 │   └── custom_query.html
+
+
+
+⸻
+
+⚠️ Notes
+	•	No authentication is included (open access to all modules)
+	•	All test data is synthetically generated
+	•	Meant for academic demo use only (not for production)
+	•	Code structure supports easy modular expansion
+
+⸻
+
+✍️ Author
+
+Jiacheng Ge, Kelin Zhu, Jingyue Liu
+Flask web structure, SQL logic, and frontend templates designed with AI-assisted collaboration.
+
+---
