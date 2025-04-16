@@ -1,0 +1,31 @@
+{% extends 'base.html' %}
+{% block content %}
+<h2>Medication Inventory</h2>
+
+<!-- Medication Table -->
+<table class="table table-striped table-bordered">
+    <thead>
+        <tr>
+            <th>Name</th>
+            <th>Manufacturer</th>
+            <th>Stock</th>
+            <th>Expiration Date</th>
+        </tr>
+    </thead>
+    <tbody>
+        {% for m in medications %}
+        <tr class="{% if m.IsWarning %}table-warning{% endif %}">
+            <td>{{ m.MedicationName }}</td>
+            <td>{{ m.Manufacturer }}</td>
+            <td>{{ m.Stock }}</td>
+            <td>{{ m.ExpirationDate }}</td>
+        </tr>
+        {% endfor %}
+    </tbody>
+</table>
+
+<!-- Explanation -->
+<p class="text-muted">
+    ⚠️ Highlighted rows indicate medications with low stock (&lt;100) or those expiring within 90 days.
+</p>
+{% endblock %}

@@ -1,0 +1,26 @@
+{% extends 'base.html' %}
+{% block content %}
+<h2>Doctor List</h2>
+<table class="table table-striped table-bordered">
+    <thead>
+        <tr>
+            <th>ID</th>
+            <th>Name</th>
+            <th>Specialty</th>
+            <th>Available Time</th>
+            <th>Contact Info</th>
+        </tr>
+    </thead>
+    <tbody>
+        {% for doc in doctors %}
+        <tr>
+            <td>{{ doc.ProviderID }}</td>
+            <td>{{ doc.FirstName }} {{ doc.LastName }}</td>
+            <td>{{ doc.Specialty }}</td>
+            <td>{{ doc.AvailableTime }}</td>
+            <td>{{ doc.ContactInfo }}</td>
+        </tr>
+        {% endfor %}
+    </tbody>
+</table>
+{% endblock %}

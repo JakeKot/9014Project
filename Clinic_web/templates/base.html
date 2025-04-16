@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Medical Management System</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+</head>
+<body class="bg-light">
+<div class="container py-4">
+    <h1 class="mb-4">Medical Management System</h1>
+    <nav class="mb-4">
+        <a href="/" class="btn btn-primary btn-sm">Home</a>
+        <a href="/patients" class="btn btn-outline-primary btn-sm">Patients</a>
+        <a href="/doctors" class="btn btn-outline-primary btn-sm">Doctors</a>
+        <a href="/appointments" class="btn btn-outline-primary btn-sm">Appointments</a>
+        <a href="/medications" class="btn btn-outline-primary btn-sm">Medications</a>
+        <a href="/queue" class="btn btn-outline-primary btn-sm">Queue</a>
+        <a href="/custom-query" class="btn btn-outline-secondary btn-sm">SQL Query</a>
+    </nav>
+    {% block content %}{% endblock %}
+</div>
+</body>
+</html>

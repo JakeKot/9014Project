@@ -1,0 +1,31 @@
+{% extends 'base.html' %}
+{% block content %}
+<h2>Add Queue Entry</h2>
+
+<form method="POST">
+    <div class="mb-3">
+        <label>Patient:</label>
+        <select name="patient_id" class="form-control" required>
+            {% for p in patients %}
+            <option value="{{ p.PatientID }}">{{ p.FirstName }} {{ p.LastName }}</option>
+            {% endfor %}
+        </select>
+    </div>
+
+    <div class="mb-3">
+        <label>Doctor:</label>
+        <select name="provider_id" class="form-control" required>
+            {% for d in providers %}
+            <option value="{{ d.ProviderID }}">{{ d.FirstName }} {{ d.LastName }}</option>
+            {% endfor %}
+        </select>
+    </div>
+
+    <div class="mb-3">
+        <label>Symptom:</label>
+        <input type="text" name="symptom" class="form-control" placeholder="Describe symptom..." required>
+    </div>
+
+    <button type="submit" class="btn btn-primary">Submit</button>
+</form>
+{% endblock %}

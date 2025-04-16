@@ -1,0 +1,11 @@
+ProviderID,FirstName,LastName,Specialty,AvailableTime,ContactInfo
+1,Dr. Cynthia,Sexton,Dentist,10AM-6PM,"329-645-0748x57320, coreysilva@example.net"
+2,Dr. Heather,Thompson,Surgeon,10AM-6PM,"736-621-9203x42572, bbarajas@example.org"
+3,Dr. Robert,Baldwin,Pediatrician,9AM-5PM,"(842)838-8535, wwalker@example.org"
+4,Dr. Alexis,Wells,Neurologist,10AM-6PM,"216.544.4365x4524, jharris@example.org"
+5,Dr. Michael,Boyd,Surgeon,10AM-6PM,"+1-343-885-3511, agallegos@example.net"
+6,Dr. Tony,Vasquez,Dentist,10AM-6PM,"+1-283-341-0527x02250, combsbenjamin@example.org"
+7,Dr. Bernard,Baker,Neurologist,10AM-6PM,"(664)920-0310, tgarcia@example.com"
+8,Dr. Dean,Martin,Neurologist,10AM-6PM,"(573)800-4424x174, michaelleon@example.com"
+9,Dr. Jenna,Black,Cardiologist,9AM-5PM,"764-872-5554, maria72@example.net"
+10,Dr. Rebecca,Roberts,Cardiologist,10AM-6PM,"234-593-7193x0432, markhernandez@example.org"

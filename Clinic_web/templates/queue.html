@@ -1,0 +1,30 @@
+{% extends 'base.html' %}
+{% block content %}
+<h2>Queue Overview</h2>
+<a href="/add-queue" class="btn btn-success mb-3">Add Queue Entry</a>
+
+<table class="table table-bordered table-striped">
+    <thead>
+        <tr>
+            <th>Queue #</th>
+            <th>Patient</th>
+            <th>Doctor</th>
+            <th>Symptom</th>
+            <th>Status</th>
+            <th>Time</th>
+        </tr>
+    </thead>
+    <tbody>
+        {% for q in queue %}
+        <tr class="{% if q.QueueStatus == 'Waiting' %}table-warning{% elif q.QueueStatus == 'InProgress' %}table-info{% elif q.QueueStatus == 'Completed' %}table-success{% endif %}">
+            <td>{{ q.QueueNumber }}</td>
+            <td>{{ q.PatientFirstName }} {{ q.PatientLastName }}</td>
+            <td>{{ q.DoctorFirstName }} {{ q.DoctorLastName }}</td>
+            <td>{{ q.Symptom }}</td>
+            <td>{{ q.QueueStatus }}</td>
+            <td>{{ q.QueueTime }}</td>
+        </tr>
+        {% endfor %}
+    </tbody>
+</table>
+{% endblock %}

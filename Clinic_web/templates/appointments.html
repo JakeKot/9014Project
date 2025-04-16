@@ -1,0 +1,75 @@
+{% extends 'base.html' %}
+{% block content %}
+<h2>Appointments</h2>
+
+<!-- Add appointment form -->
+<div class="card mb-4">
+  <div class="card-header">Add New Appointment</div>
+  <div class="card-body">
+    <form method="POST">
+      <div class="row mb-2">
+        <div class="col">
+          <label>Patient:</label>
+          <select name="patient_id" class="form-control" required>
+            {% for p in patients %}
+            <option value="{{ p.PatientID }}">{{ p.FirstName }} {{ p.LastName }}</option>
+            {% endfor %}
+          </select>
+        </div>
+        <div class="col">
+          <label>Doctor:</label>
+          <select name="provider_id" class="form-control" required>
+            {% for d in providers %}
+            <option value="{{ d.ProviderID }}">{{ d.FirstName }} {{ d.LastName }}</option>
+            {% endfor %}
+          </select>
+        </div>
+        <div class="col">
+          <label>Date & Time:</label>
+          <input type="datetime-local" name="appointment_date" class="form-control" required>
+        </div>
+      </div>
+      <div class="row mb-2">
+        <div class="col">
+          <input type="text" name="time_slot" class="form-control" placeholder="Time Slot (e.g., Morning)" required>
+        </div>
+        <div class="col">
+          <input type="text" name="symptom" class="form-control" placeholder="Symptom" required>
+        </div>
+        <div class="col">
+          <select name="status" class="form-control" required>
+            <option>Scheduled</option>
+            <option>Completed</option>
+            <option>Cancelled</option>
+          </select>
+        </div>
+      </div>
+      <textarea name="notes" class="form-control mb-2" placeholder="Notes (optional)"></textarea>
+      <button type="submit" class="btn btn-success">Add Appointment</button>
+    </form>
+  </div>
+</div>
+
+<!-- Appointments list -->
+<h4>All Appointments</h4>
+<table class="table table-bordered table-striped">
+  <thead>
+    <tr>
+      <th>Date</th><th>Time Slot</th><th>Patient</th><th>Doctor</th><th>Symptom</th><th>Status</th><th>Notes</th>
+    </tr>
+  </thead>
+  <tbody>
+    {% for a in appointments %}
+    <tr>
+      <td>{{ a.AppointmentDate }}</td>
+      <td>{{ a.TimeSlot }}</td>
+      <td>{{ a.PatientFirstName }} {{ a.PatientLastName }}</td>
+      <td>{{ a.DoctorFirstName }} {{ a.DoctorLastName }}</td>
+      <td>{{ a.Symptom }}</td>
+      <td>{{ a.Status }}</td>
+      <td>{{ a.Notes }}</td>
+    </tr>
+    {% endfor %}
+  </tbody>
+</table>
+{% endblock %}

@@ -1,0 +1,40 @@
+{% extends 'base.html' %}
+{% block content %}
+<h2>Custom SQL Query</h2>
+
+<!-- Query input form -->
+<form method="POST" class="mb-3">
+    <textarea name="query" class="form-control" rows="4" placeholder="Write your SELECT query here..." required>{{ query }}</textarea>
+    <button type="submit" class="btn btn-primary mt-2">Run Query</button>
+</form>
+
+<!-- Error message -->
+{% if error %}
+<div class="alert alert-danger">
+    <strong>Error:</strong> {{ error }}
+</div>
+{% endif %}
+
+<!-- Query results table -->
+{% if results %}
+<h5>Results:</h5>
+<table class="table table-bordered table-sm">
+    <thead>
+        <tr>
+            {% for col in columns %}
+            <th>{{ col }}</th>
+            {% endfor %}
+        </tr>
+    </thead>
+    <tbody>
+        {% for row in results %}
+        <tr>
+            {% for col in columns %}
+            <td>{{ row[col] }}</td>
+            {% endfor %}
+        </tr>
+        {% endfor %}
+    </tbody>
+</table>
+{% endif %}
+{% endblock %}
