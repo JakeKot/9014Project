@@ -1,9 +1,3 @@
-当然可以！以下是你项目的完整 README.md 内容，专为你当前结构定制，包括文件改名为 DataGen.py，你可以一键复制整段粘贴到 GitHub 仓库中使用 ✅
-
-⸻
-
-📄 README.md 内容（可直接复制）
-
 # Clinic Management System (Flask + MySQL)
 
 This is a web-based clinic management system developed for ECE 9014 – Data Management and Applications. The system enables users to manage patients, doctors, appointments, medications, and queue information using a Python Flask frontend and a MySQL backend.
