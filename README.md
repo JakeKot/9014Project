@@ -1,6 +1,6 @@
-# Clinic Management System (Flask + MySQL)
+# Medical Management System (Flask + MySQL)
 
-This is a web-based clinic management system developed for ECE 9014 – Data Management and Applications. The system enables users to manage patients, doctors, appointments, medications, and queue information using a Python Flask frontend and a MySQL backend.
+This is a web-based medical management system developed for ECE 9014 – Data Management and Applications. The system enables users to manage patients, doctors, appointments, medications, and queue information using a Python Flask frontend and a MySQL backend.
 
 ## 💡 Features
 
